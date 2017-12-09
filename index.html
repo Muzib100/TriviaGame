@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	  <meta charset="UTF-8">
+	  <title>Trivia Game</title>
+</head>
+
+<style>
+.bad{
+	display:none;
+}
+	/*div.row1 {
+        background:green;
+    }*/
+</style> 
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+<body>
+<!-- 
+ <h1>This is a timer based Trivia Quiz </h1>
+ <button>Click to Start</button> -->
+
+<!--  A time down counter will be displayed once the Click to Start is pressed. The time down counter etc. has not been implemented yet -->
+
+ 
+<!-- In below, a Radio button based form of 4 questions will be created. Each question will have 3 suggested answers. Once the user chooses an answer
+the program will capture the answer and compare with the correct answer -->
+
+
+  
+
+  
+
+  <div class="jumbotron">
+    	<div class="container p-3 mb-2 bg-danger text-white">
+
+		      <h2 class="text-center">This is a timer based Trivia Quiz </h2>
+
+				    <div class="text-center">
+
+				        <!-- Here we have our button with id random-button to trigger count-down timer-->
+							<button class="btn btn-primary btn-lg" id="random-button-button"><h3>Click to Start</h3></button>
+						<!-- Here we have the div where our count down clock number will display -->
+							<h4 class="text-center" id="clock-display"> Timer </h4>
+							<br>
+
+				     </div>
+  <div id="trivia-container" class="bad">
+				    <div class="row">
+				    	<div class = "col-lg-1"></div>
+				      
+					      <div class = "col-lg-8">
+					        	<form id="myForm1"><p><span id='Q1'>Q1:------ , </span>
+									 Ans: <span id='A1'></span></p>
+										<input type="radio" name="radioName" value = quizList[0].ans1 /> <span id='q1a1'>A1</span> <br />
+										<input type="radio" name="radioName" value = quizList[0].ans2 /> <span id='q1a2'>A2</span> <br />
+										<input type="radio" name="radioName" value = quizList[0].ans3 /> <span id='q1a3'>A3</span> <br />
+								</form>
+								<br>
+						   </div>
+					</div>
+
+					<div class="row">
+				    	<div class = "col-lg-1"></div>
+				      
+					      <div class = "col-lg-8">
+
+										<form id="myForm2"><p><span id='Q2'>Q2:------ , </span>
+											  Ans: <span id='A2'></span></p>
+												<input type="radio" name="radioName" value="quizList[1].ans1" /> <span id='q2a1'> A1</span> <br />
+												<input type="radio" name="radioName" value="quizList[1].ans2" /> <span id='q2a2'> A2</span> <br />
+												<input type="radio" name="radioName" value="quizList[1].ans3" /> <span id='q2a3'> A3</span> <br />
+										</form>
+										<br>
+							   </div>
+						</div>
+						<div class="row">
+					    	<div class = "col-lg-1"></div>
+					      
+						      <div class = "col-lg-8">
+									<form id="myForm3"><p><span id='Q3'>Q3:------ , </span>
+										Ans: <span id='A3'></span></p>
+											<input type="radio" name="radioName" value="quizList[2].ans1" /> <span id='q3a1'>A1</span> <br />
+											<input type="radio" name="radioName" value="quizList[2].ans2" /> <span id='q3a2'>A2</span> <br />
+											<input type="radio" name="radioName" value="quizList[2].ans3" /> <span id='q3a3'>A3</span> <br />
+									</form>
+									<br>
+								</div>
+					</div>
+
+					<div class="row">
+				    	<div class = "col-lg-1"></div>
+				      
+					       <div class = "col-lg-8">
+								<form id="myForm4"><p><span id='Q4'>Q4:------ , </span>
+									Ans: <span id='A4'></span></p>
+										<input type="radio" name="radioName" value="quizList[3].ans1" /> <span id='q4a1'> A1</span> <br />
+										<input type="radio" name="radioName" value="quizList[3].ans2" /> <span id='q4a2'> A2</span> <br />
+										<input type="radio" name="radioName" value="quizList[3].ans3" /> <span id='q4a3'> A3</span> <br />
+								</form>
+								<br>
+					      </div>
+					    
+		 			</div>
+
+					<!-- Update score -->
+			 			<div class="row">
+
+					    	<div class = "col-lg-1"></div>
+					      
+						       	<div class = "col-lg-8">
+										<p>Correct count:<span id='correctScore'> </span></p>
+										<p>Wrong count:<span id='wrongScore'></span></p>
+						      	</div>
+			    
+						    
+			 				</div>
+
+						</div>
+					</div>
+			</div>
+	</div>
+  
+
+ 
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script type="text/javascript" src = "./assets/app.js"></script>
+ 
+
+
+ </body>
+ </html>
